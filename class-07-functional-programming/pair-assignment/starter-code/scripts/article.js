@@ -1,6 +1,6 @@
-// TODO: Wrap the entire contents of this file in an IIFE.
+// DONE: Wrap the entire contents of this file in an IIFE.
 // Pass in to the IIFE a module, upon which objects can be attached for later access.
-// (function(module) {
+(function(module){
 
   function Article (opts) {
     this.author = opts.author;
@@ -73,19 +73,36 @@
     }, 0);
   };
 
-  // TODO: Chain together a `map` and a `reduce` call to produce an array of unique author names.
+  // DONE: Chain together a `map` and a `reduce` call to produce an array of unique author names.
   Article.allAuthors = function() {
-    return // Don't forget to read the docs on map and reduce!
+    return Article.all.map(function(article){
+      return article.author;
+    })
+    .reduce(function(a, b){
+      if (a.indexOf(b) < 0){
+        a.push(b);
+      }
+      return a;
+    }, []);// Don't forget to read the docs on map and reduce!
   };
 
   Article.numWordsByAuthor = function() {
-    // TODO: Transform each author string into an object with 2 properties: One for
+    // DONE: Transform each author string into an object with 2 properties: One for
     // the author's name, and one for the total number of words across all articles written by the specified author.
     return Article.allAuthors().map(function(author) {
       return {
+        authorName: author,
+        authorCount: Article.all.reduce(function(a, b) {
+          if (b.author === author){
+            a.push(b.body.split(' ').length);
+          }
+          return a;
+        }, []).reduce(function(a, b){
+          return a + b;
+        })
         // someKey: someValOrFunctionCall().map(...).reduce(...), ...
       };
     });
   };
-
-// })(window);
+  module.Article = Article;
+})(window);
