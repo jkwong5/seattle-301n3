@@ -10,7 +10,11 @@
       'latitude INTEGER NOT NULL,' +
       'longitude INTEGER NOT NULL,' +
       'population INTEGER NOT NULL,' +
+<<<<<<< HEAD
       'zip VARCHAR(255) NOT NULL)',
+=======
+      'zip INTEGER NOT NULL)',
+>>>>>>> 82f60c9f95e950976af796bc82d103354fdaea00
       function(result) {
         console.log('Successfully set up the zips table.', result);
         if (callback) callback();
