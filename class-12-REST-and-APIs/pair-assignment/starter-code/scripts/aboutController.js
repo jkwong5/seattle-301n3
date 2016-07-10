@@ -7,8 +7,11 @@
 
     // TODO: Call a function to 'request' our repo data.
     // Pass in a view function as a callback, so our repos will render after the data is loaded.
+<<<<<<< HEAD
     // function(view){
     repos.requestRepos(repoView.index);
+=======
+>>>>>>> ef2f25eee6ec31e4df18aa5e7a626c2e31cbb700
   };
 
   module.aboutController = aboutController;
