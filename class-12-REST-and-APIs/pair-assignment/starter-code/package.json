@@ -4,25 +4,15 @@
   "description": "As we now complete our MVC conversation, we can refactor our app to use good MVC separation of concerns.",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> ef2f25eee6ec31e4df18aa5e7a626c2e31cbb700
   },
   "author": "Code Fellows",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.14.0",
     "express-request-proxy": "^1.0.10"
   },
   "devDependencies": {},
   "keywords": []
-=======
-    "express": "^4.13.3",
-    "express-request-proxy": "^1.0.10"
-  }
->>>>>>> ef2f25eee6ec31e4df18aa5e7a626c2e31cbb700
 }
